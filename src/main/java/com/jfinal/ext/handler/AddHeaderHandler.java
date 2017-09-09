@@ -44,8 +44,7 @@ public class AddHeaderHandler extends Handler {
                 response.addDateHeader(name, (Long) header);
             }
             else {
-                new RuntimeException("Not support the name (" + name + ") with  value that type is "
-                        + header.getClass());
+                new RuntimeException("Not support the name (" + name + ") with  value that type is " + header.getClass());
             }
         }
         next.handle(target, request, response, isHandled);
