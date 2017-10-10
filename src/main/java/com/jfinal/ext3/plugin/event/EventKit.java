@@ -92,7 +92,7 @@ public class EventKit {
 				@Override
 				public int compare(ApplicationListenerMethodAdapter o1, ApplicationListenerMethodAdapter o2) {
 					int x = o1.getOrder(); int y = o2.getOrder();
-					return (x < y) ? -1 : ((x == y) ? 0 : 1);
+					return Integer.compare(x, y);
 				}
 			});
 		}
